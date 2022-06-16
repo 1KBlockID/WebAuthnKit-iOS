@@ -49,12 +49,12 @@ public class ECDSAKeySupport : KeySupport {
     
     private func createPair(label: String) -> EllipticCurveKeyPair.Manager {
         let publicAccessControl = EllipticCurveKeyPair.AccessControl(
-            protection: kSecAttrAccessibleAlwaysThisDeviceOnly,
+            protection: kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
             flags:      []
         )
         let privateAccessControl = EllipticCurveKeyPair.AccessControl(
-            protection: kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly,
-            flags:      [.userPresence, .privateKeyUsage]
+            protection: kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
+            flags:      [.privateKeyUsage]
         )
         let config = EllipticCurveKeyPair.Config(
             publicLabel:             "\(label)/public",
@@ -66,7 +66,7 @@ public class ECDSAKeySupport : KeySupport {
         )
         return EllipticCurveKeyPair.Manager(config: config)
     }
-    
+
     public func sign(data: [UInt8], label: String, context: LAContext) -> Optional<[UInt8]> {
         do {
             let pair = self.createPair(label: label)

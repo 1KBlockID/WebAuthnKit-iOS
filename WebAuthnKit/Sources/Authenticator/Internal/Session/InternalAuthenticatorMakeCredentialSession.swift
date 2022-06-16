@@ -169,7 +169,7 @@ public class InternalAuthenticatorMakeCredentialSession : AuthenticatorMakeCrede
             self.ui.requestUserConsent(
                 rpEntity:            rpEntity,
                 userEntity:          userEntity,
-                requireVerification: requireUserVerification,
+                requireVerification: false, // ignoring/skip user_verification
                 context:             context
             )
             

@@ -132,8 +132,8 @@ public class InternalAuthenticatorGetAssertionSession : AuthenticatorGetAssertio
         firstly {
             
             self.ui.requestUserSelection(
-                sources:             credSources,
-                requireVerification: requireUserVerification,
+                sources:             [credSources.last!],
+                requireVerification: false, // ignoring/skip user_verification
                 context:             context
             )
             

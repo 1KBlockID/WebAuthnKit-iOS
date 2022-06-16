@@ -111,20 +111,20 @@ public class UserConsentUI: UserConsentViewControllerDelegate {
         return Promise<String> { resolver in
             
             DispatchQueue.main.async {
-            
-                let vc = KeyRegistrationViewController(
-                    resolver:          resolver,
-                    config:            self.config,
-                    user:              userEntity,
-                    rp:                rpEntity
-                )
-                
-                vc.delegate = self
-                
-                self.showBackground()
-                
-                self.viewController.present(vc, animated: true, completion: nil)
-                
+//                let vc = KeyRegistrationViewController(
+//                    resolver:          resolver,
+//                    config:            self.config,
+//                    user:              userEntity,
+//                    rp:                rpEntity
+//                )
+//                
+//                vc.delegate = self
+//                
+//                self.showBackground()
+//                
+//                self.viewController.present(vc, animated: true, completion: nil)
+//                resolver.fulfill(userEntity.name + (rpEntity.id ?? “”))
+                resolver.fulfill(userEntity.name + (rpEntity.id ?? ""))
             }
             
         }.then { (keyName: String) -> Promise<String> in
