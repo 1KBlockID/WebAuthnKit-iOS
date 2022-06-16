@@ -8,7 +8,8 @@ This library provides you a way to handle W3C Web Authentication API (a.k.a. Web
 bid.homepage                = 'https://github.com/1KBlockID/WebAuthnKit-iOS'
 bid.license                 = { :type => "MIT", :file => "LICENSE" }
 bid.author                  = { "lyokato" => "lyo.kato@gmail.com" }
-bid.source                  = { :git => 'https://github.com/1KBlockID/WebAuthnKit-iOS', :tag => s.version }
+bid.source                  = { :git => 'https://github.com/1KBlockID/WebAuthnKit-iOS.git', :tag => bid.version }
+
 bid.ios.deployment_target   = '11.0'
 bid.source_files            = "WebAuthnKit/Sources/**/*.swift"
 
