@@ -14,7 +14,7 @@ bid.ios.deployment_target   = '11.0'
 bid.source_files            = "WebAuthnKit/Sources/**/*.swift"
 
 bid.dependency "PromiseKit", "~> 6.13.1"
-bid.dependency "EllipticCurveKeyPair", "~> 2.0"
+# bid.dependency "EllipticCurveKeyPair", "~> 2.0.1"
 bid.dependency "KeychainAccess", "~> 4.2.1"
 bid.dependency "CryptoSwift", "~> 1.3.8"
 
