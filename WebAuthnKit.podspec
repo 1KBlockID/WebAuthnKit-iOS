@@ -10,7 +10,7 @@ bid.license                 = { :type => "MIT", :file => "LICENSE" }
 bid.author                  = { "lyokato" => "lyo.kato@gmail.com" }
 bid.source                  = { :git => 'https://github.com/1KBlockID/WebAuthnKit-iOS.git', :tag => bid.version }
 
-bid.ios.deployment_target   = '11.0'
+bid.ios.deployment_target   = '11.4'
 bid.source_files            = "WebAuthnKit/Sources/**/*.swift"
 
 bid.dependency "PromiseKit", "~> 6.13.1"
@@ -18,6 +18,6 @@ bid.dependency "PromiseKit", "~> 6.13.1"
 bid.dependency "KeychainAccess", "~> 4.2.1"
 bid.dependency "CryptoSwift", "~> 1.3.8"
 
-bid.swift_version = "4.2"
+bid.swift_version = "5.5"
 
 end

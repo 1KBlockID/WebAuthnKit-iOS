@@ -33,7 +33,7 @@ post_install do |installer|
     target.build_configurations.each do |config|
 
       # set valid architecture
-      config.build_settings['VALID_ARCHS'] = 'arm64 armv7 armv7s i386 x86_64'
+      config.build_settings['VALID_ARCHS'] = '$(ARCHS_STANDARD)'
 
       # build active architecture only
       config.build_settings['ONLY_ACTIVE_ARCH'] = 'YES'
