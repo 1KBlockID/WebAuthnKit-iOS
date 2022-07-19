@@ -1,12 +1,14 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '12.0'
+
+source 'https://github.com/kuldeep-1k/private-podspec.git'
 
 target 'WebAuthnKitDemo' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
   pod "PromiseKit", "~> 6.13.1"
-#  pod "EllipticCurveKeyPair", "~> 2.0"
+  pod "EllipticCurveKeyPair", "~> 2.0.2"
   pod "KeychainAccess", "~> 4.2.1"
   pod "CryptoSwift", "~> 1.3.8"
 
@@ -15,7 +17,7 @@ target 'WebAuthnKitDemo' do
   target 'WebAuthnKit' do
     inherit! :search_paths
     pod "PromiseKit", "~> 6.13.1"
-#    pod "EllipticCurveKeyPair", "~> 2.0"
+    pod "EllipticCurveKeyPair", "~> 2.0.2"
     pod "KeychainAccess", "~> 4.2.1"
     pod "CryptoSwift", "~> 1.3.8"
   end
@@ -49,7 +51,7 @@ post_install do |installer|
       config.build_settings['OTHER_CFLAGS'] = cflags
       
       # set iOS Deployment Target to 11.0
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.4'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
       
       # set build library for distribution to true
       config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
