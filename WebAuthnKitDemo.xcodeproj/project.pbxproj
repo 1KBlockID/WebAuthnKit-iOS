@@ -3,14 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F5499F5287DF85A00BB1B6F /* EllipticCurveKeyPair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE4A87E287871DD008F7125 /* EllipticCurveKeyPair.framework */; };
-		1F5499F6287DF85A00BB1B6F /* EllipticCurveKeyPair.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE4A87E287871DD008F7125 /* EllipticCurveKeyPair.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1F90508B287C63D800B576CF /* EllipticCurveKeyPair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE4A87E287871DD008F7125 /* EllipticCurveKeyPair.framework */; platformFilter = ios; };
-		1F90508C287C63D800B576CF /* EllipticCurveKeyPair.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE4A87E287871DD008F7125 /* EllipticCurveKeyPair.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F9224442878748400F50832 /* WebAuthnKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9224432878748400F50832 /* WebAuthnKit.framework */; };
 		1F9224452878748400F50832 /* WebAuthnKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9224432878748400F50832 /* WebAuthnKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C1CE6CC94C675903DECD1AA /* Pods_WebAuthnKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23E76BBB8B253980A27DDD2 /* Pods_WebAuthnKit.framework */; };
@@ -76,13 +72,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1F5499F7287DF85A00BB1B6F /* Embed Frameworks */ = {
+		1F5499FB287FEC3200BB1B6F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1F5499F6287DF85A00BB1B6F /* EllipticCurveKeyPair.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,7 +88,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1F90508C287C63D800B576CF /* EllipticCurveKeyPair.framework in Embed Frameworks */,
 				1F9224452878748400F50832 /* WebAuthnKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -103,7 +97,6 @@
 
 /* Begin PBXFileReference section */
 		1F9224432878748400F50832 /* WebAuthnKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebAuthnKit.framework; sourceTree = "<group>"; };
-		1FE4A87E287871DD008F7125 /* EllipticCurveKeyPair.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EllipticCurveKeyPair.framework; sourceTree = "<group>"; };
 		54DBD0C3C74123F3DB3CA01B /* Pods-WebAuthnKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKitDemo.release.xcconfig"; path = "Target Support Files/Pods-WebAuthnKitDemo/Pods-WebAuthnKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		65EFA5498C6F74BBA5A9FBB8 /* Pods-WebAuthnKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKitTests.debug.xcconfig"; path = "Target Support Files/Pods-WebAuthnKitTests/Pods-WebAuthnKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9030FF9F21A5369600FB8878 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -166,7 +159,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC07176E26B2BB40447D6C7 /* Pods_WebAuthnKitDemo.framework in Frameworks */,
-				1F90508B287C63D800B576CF /* EllipticCurveKeyPair.framework in Frameworks */,
 				1F9224442878748400F50832 /* WebAuthnKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,7 +167,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F5499F5287DF85A00BB1B6F /* EllipticCurveKeyPair.framework in Frameworks */,
 				3C1CE6CC94C675903DECD1AA /* Pods_WebAuthnKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				1F9224432878748400F50832 /* WebAuthnKit.framework */,
-				1FE4A87E287871DD008F7125 /* EllipticCurveKeyPair.framework */,
 				D23E76BBB8B253980A27DDD2 /* Pods_WebAuthnKit.framework */,
 				F9E6D625815460BB9518428A /* Pods_WebAuthnKitDemo.framework */,
 				DAE00677967880A256092E9B /* Pods_WebAuthnKitTests.framework */,
@@ -409,7 +399,7 @@
 				90D2EA0C21A425DC00032373 /* Sources */,
 				90D2EA0D21A425DC00032373 /* Frameworks */,
 				90D2EA0E21A425DC00032373 /* Resources */,
-				1F5499F7287DF85A00BB1B6F /* Embed Frameworks */,
+				1F5499FB287FEC3200BB1B6F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -873,7 +863,7 @@
 			baseConfigurationReference = A819A43E859E49FCE46ABFCB /* Pods-WebAuthnKit.debug.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -924,7 +914,7 @@
 			baseConfigurationReference = CED889AE8266A28141E08749 /* Pods-WebAuthnKit.release.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
