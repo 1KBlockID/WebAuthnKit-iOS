@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C1CE6CC94C675903DECD1AA /* Pods_WebAuthnKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23E76BBB8B253980A27DDD2 /* Pods_WebAuthnKit.framework */; };
-		5C9F1987175EA6821F22304E /* Pods_WebAuthnKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE00677967880A256092E9B /* Pods_WebAuthnKitTests.framework */; };
+		1D2A32A8DD2C5F7D930AE35E /* Pods_WebAuthnKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC36E227CA57A2957A41EB3 /* Pods_WebAuthnKitTests.framework */; };
 		9030FFA021A5369600FB8878 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030FF9F21A5369600FB8878 /* RegistrationViewController.swift */; };
 		9030FFA221A5377100FB8878 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030FFA121A5377100FB8878 /* AuthenticationViewController.swift */; };
 		9030FFA421A53A7D00FB8878 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030FFA321A53A7D00FB8878 /* ResultViewController.swift */; };
@@ -49,7 +48,8 @@
 		90D2EA7321A7B2F700032373 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2EA7221A7B2F700032373 /* ImageHelper.swift */; };
 		90D2EA7521A82ED800032373 /* CredentialSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2EA7421A82ED800032373 /* CredentialSource.swift */; };
 		90D2EA7721AA6FDD00032373 /* UserConsentUIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2EA7621AA6FDD00032373 /* UserConsentUIConfig.swift */; };
-		EDC07176E26B2BB40447D6C7 /* Pods_WebAuthnKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E6D625815460BB9518428A /* Pods_WebAuthnKitDemo.framework */; };
+		DB1F3CF11EC5B763A7994208 /* Pods_WebAuthnKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E30389E45DFC0C44C1D3142 /* Pods_WebAuthnKitDemo.framework */; };
+		FFA5A801ADB6AFCF057E6287 /* Pods_WebAuthnKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCE1FBA85FD673841BAB1B3 /* Pods_WebAuthnKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +93,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		54DBD0C3C74123F3DB3CA01B /* Pods-WebAuthnKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKitDemo.release.xcconfig"; path = "Target Support Files/Pods-WebAuthnKitDemo/Pods-WebAuthnKitDemo.release.xcconfig"; sourceTree = "<group>"; };
-		65EFA5498C6F74BBA5A9FBB8 /* Pods-WebAuthnKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKitTests.debug.xcconfig"; path = "Target Support Files/Pods-WebAuthnKitTests/Pods-WebAuthnKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0DCE1FBA85FD673841BAB1B3 /* Pods_WebAuthnKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebAuthnKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FECF139C31D8CF16628608B /* Pods-WebAuthnKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-WebAuthnKitDemo/Pods-WebAuthnKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		2E30389E45DFC0C44C1D3142 /* Pods_WebAuthnKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebAuthnKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50B7A9860B5ACF305F766E73 /* Pods-WebAuthnKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKitTests.release.xcconfig"; path = "Target Support Files/Pods-WebAuthnKitTests/Pods-WebAuthnKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		56AE9120C43F0D8BBF574FDE /* Pods-WebAuthnKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKitTests.debug.xcconfig"; path = "Target Support Files/Pods-WebAuthnKitTests/Pods-WebAuthnKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		761B97CEF0CC0AD197DD6679 /* Pods-WebAuthnKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKit.release.xcconfig"; path = "Target Support Files/Pods-WebAuthnKit/Pods-WebAuthnKit.release.xcconfig"; sourceTree = "<group>"; };
 		9030FF9F21A5369600FB8878 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		9030FFA121A5377100FB8878 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		9030FFA321A53A7D00FB8878 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
@@ -140,13 +144,9 @@
 		90D2EA7221A7B2F700032373 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		90D2EA7421A82ED800032373 /* CredentialSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialSource.swift; sourceTree = "<group>"; };
 		90D2EA7621AA6FDD00032373 /* UserConsentUIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConsentUIConfig.swift; sourceTree = "<group>"; };
-		A3C9970AD55B80E9F8978E81 /* Pods-WebAuthnKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-WebAuthnKitDemo/Pods-WebAuthnKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		A819A43E859E49FCE46ABFCB /* Pods-WebAuthnKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKit.debug.xcconfig"; path = "Target Support Files/Pods-WebAuthnKit/Pods-WebAuthnKit.debug.xcconfig"; sourceTree = "<group>"; };
-		BA396DFFE287EC4B0A7C1D5B /* Pods-WebAuthnKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKitTests.release.xcconfig"; path = "Target Support Files/Pods-WebAuthnKitTests/Pods-WebAuthnKitTests.release.xcconfig"; sourceTree = "<group>"; };
-		CED889AE8266A28141E08749 /* Pods-WebAuthnKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKit.release.xcconfig"; path = "Target Support Files/Pods-WebAuthnKit/Pods-WebAuthnKit.release.xcconfig"; sourceTree = "<group>"; };
-		D23E76BBB8B253980A27DDD2 /* Pods_WebAuthnKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebAuthnKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAE00677967880A256092E9B /* Pods_WebAuthnKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebAuthnKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9E6D625815460BB9518428A /* Pods_WebAuthnKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebAuthnKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		991E46E1D1C111F28D4C401D /* Pods-WebAuthnKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKitDemo.release.xcconfig"; path = "Target Support Files/Pods-WebAuthnKitDemo/Pods-WebAuthnKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		CFC36E227CA57A2957A41EB3 /* Pods_WebAuthnKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebAuthnKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CD189EBD3EE7F726E5E9EF /* Pods-WebAuthnKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKit.debug.xcconfig"; path = "Target Support Files/Pods-WebAuthnKit/Pods-WebAuthnKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDC07176E26B2BB40447D6C7 /* Pods_WebAuthnKitDemo.framework in Frameworks */,
+				DB1F3CF11EC5B763A7994208 /* Pods_WebAuthnKitDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C1CE6CC94C675903DECD1AA /* Pods_WebAuthnKit.framework in Frameworks */,
+				FFA5A801ADB6AFCF057E6287 /* Pods_WebAuthnKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,23 +171,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				90D2EA1921A425DC00032373 /* WebAuthnKit.framework in Frameworks */,
-				5C9F1987175EA6821F22304E /* Pods_WebAuthnKitTests.framework in Frameworks */,
+				1D2A32A8DD2C5F7D930AE35E /* Pods_WebAuthnKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FE4A87D287871DD008F7125 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D23E76BBB8B253980A27DDD2 /* Pods_WebAuthnKit.framework */,
-				F9E6D625815460BB9518428A /* Pods_WebAuthnKitDemo.framework */,
-				DAE00677967880A256092E9B /* Pods_WebAuthnKitTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		9030FFA521A69FA200FB8878 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,8 +196,8 @@
 				90D2EA1121A425DC00032373 /* WebAuthnKit */,
 				90D2EA1E21A425DD00032373 /* WebAuthnKitTests */,
 				90D2E9DB21A424DD00032373 /* Products */,
-				1FE4A87D287871DD008F7125 /* Frameworks */,
 				B9CF195E44860A8D0B06A02D /* Pods */,
+				D794BEB429CF77166C2BC97D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -340,14 +330,24 @@
 		B9CF195E44860A8D0B06A02D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A819A43E859E49FCE46ABFCB /* Pods-WebAuthnKit.debug.xcconfig */,
-				CED889AE8266A28141E08749 /* Pods-WebAuthnKit.release.xcconfig */,
-				A3C9970AD55B80E9F8978E81 /* Pods-WebAuthnKitDemo.debug.xcconfig */,
-				54DBD0C3C74123F3DB3CA01B /* Pods-WebAuthnKitDemo.release.xcconfig */,
-				65EFA5498C6F74BBA5A9FBB8 /* Pods-WebAuthnKitTests.debug.xcconfig */,
-				BA396DFFE287EC4B0A7C1D5B /* Pods-WebAuthnKitTests.release.xcconfig */,
+				E2CD189EBD3EE7F726E5E9EF /* Pods-WebAuthnKit.debug.xcconfig */,
+				761B97CEF0CC0AD197DD6679 /* Pods-WebAuthnKit.release.xcconfig */,
+				1FECF139C31D8CF16628608B /* Pods-WebAuthnKitDemo.debug.xcconfig */,
+				991E46E1D1C111F28D4C401D /* Pods-WebAuthnKitDemo.release.xcconfig */,
+				56AE9120C43F0D8BBF574FDE /* Pods-WebAuthnKitTests.debug.xcconfig */,
+				50B7A9860B5ACF305F766E73 /* Pods-WebAuthnKitTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D794BEB429CF77166C2BC97D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DCE1FBA85FD673841BAB1B3 /* Pods_WebAuthnKit.framework */,
+				2E30389E45DFC0C44C1D3142 /* Pods_WebAuthnKitDemo.framework */,
+				CFC36E227CA57A2957A41EB3 /* Pods_WebAuthnKitTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,12 +368,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90D2EA0221A424DE00032373 /* Build configuration list for PBXNativeTarget "WebAuthnKitDemo" */;
 			buildPhases = (
-				665DE4ED0F661B5DB065DB18 /* [CP] Check Pods Manifest.lock */,
+				21F6905F2A3A32F5B557A9B0 /* [CP] Check Pods Manifest.lock */,
 				90D2E9D621A424DD00032373 /* Sources */,
 				90D2E9D721A424DD00032373 /* Frameworks */,
 				90D2E9D821A424DD00032373 /* Resources */,
-				BE83911119E4EA370588A061 /* [CP] Embed Pods Frameworks */,
 				1F9224462878748400F50832 /* Embed Frameworks */,
+				EED9A6929527C0DB14AAA939 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -388,7 +388,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90D2EA2B21A425DD00032373 /* Build configuration list for PBXNativeTarget "WebAuthnKit" */;
 			buildPhases = (
-				27F3E04DC255AABBCCD9D530 /* [CP] Check Pods Manifest.lock */,
+				8FFA7B87AD77A1656E6AA2CF /* [CP] Check Pods Manifest.lock */,
 				90D2EA0B21A425DC00032373 /* Headers */,
 				90D2EA0C21A425DC00032373 /* Sources */,
 				90D2EA0D21A425DC00032373 /* Frameworks */,
@@ -408,11 +408,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90D2EA2D21A425DD00032373 /* Build configuration list for PBXNativeTarget "WebAuthnKitTests" */;
 			buildPhases = (
-				6D3ECD6666A3FD4454CB3205 /* [CP] Check Pods Manifest.lock */,
+				F5EF2F1FB04AAF24F43AE4C1 /* [CP] Check Pods Manifest.lock */,
 				90D2EA1421A425DC00032373 /* Sources */,
 				90D2EA1521A425DC00032373 /* Frameworks */,
 				90D2EA1621A425DC00032373 /* Resources */,
-				EC4C019C09A1BB81AE7B0664 /* [CP] Embed Pods Frameworks */,
+				678DE0595FDC508BC7B08273 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -495,29 +495,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		27F3E04DC255AABBCCD9D530 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WebAuthnKit-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		665DE4ED0F661B5DB065DB18 /* [CP] Check Pods Manifest.lock */ = {
+		21F6905F2A3A32F5B557A9B0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -539,7 +517,63 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6D3ECD6666A3FD4454CB3205 /* [CP] Check Pods Manifest.lock */ = {
+		678DE0595FDC508BC7B08273 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebAuthnKitTests/Pods-WebAuthnKitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebAuthnKitTests/Pods-WebAuthnKitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebAuthnKitTests/Pods-WebAuthnKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FFA7B87AD77A1656E6AA2CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebAuthnKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EED9A6929527C0DB14AAA939 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebAuthnKitDemo/Pods-WebAuthnKitDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WebAuthnKitDemo/Pods-WebAuthnKitDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebAuthnKitDemo/Pods-WebAuthnKitDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5EF2F1FB04AAF24F43AE4C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -559,40 +593,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE83911119E4EA370588A061 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebAuthnKitDemo/Pods-WebAuthnKitDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebAuthnKitDemo/Pods-WebAuthnKitDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebAuthnKitDemo/Pods-WebAuthnKitDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EC4C019C09A1BB81AE7B0664 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebAuthnKitTests/Pods-WebAuthnKitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebAuthnKitTests/Pods-WebAuthnKitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebAuthnKitTests/Pods-WebAuthnKitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -807,7 +807,7 @@
 		};
 		90D2EA0321A424DE00032373 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3C9970AD55B80E9F8978E81 /* Pods-WebAuthnKitDemo.debug.xcconfig */;
+			baseConfigurationReference = 1FECF139C31D8CF16628608B /* Pods-WebAuthnKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -831,7 +831,7 @@
 		};
 		90D2EA0421A424DE00032373 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54DBD0C3C74123F3DB3CA01B /* Pods-WebAuthnKitDemo.release.xcconfig */;
+			baseConfigurationReference = 991E46E1D1C111F28D4C401D /* Pods-WebAuthnKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -856,7 +856,7 @@
 		};
 		90D2EA2721A425DD00032373 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A819A43E859E49FCE46ABFCB /* Pods-WebAuthnKit.debug.xcconfig */;
+			baseConfigurationReference = E2CD189EBD3EE7F726E5E9EF /* Pods-WebAuthnKit.debug.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -908,7 +908,7 @@
 		};
 		90D2EA2821A425DD00032373 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CED889AE8266A28141E08749 /* Pods-WebAuthnKit.release.xcconfig */;
+			baseConfigurationReference = 761B97CEF0CC0AD197DD6679 /* Pods-WebAuthnKit.release.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -959,7 +959,7 @@
 		};
 		90D2EA2921A425DD00032373 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65EFA5498C6F74BBA5A9FBB8 /* Pods-WebAuthnKitTests.debug.xcconfig */;
+			baseConfigurationReference = 56AE9120C43F0D8BBF574FDE /* Pods-WebAuthnKitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
@@ -979,7 +979,7 @@
 		};
 		90D2EA2A21A425DD00032373 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA396DFFE287EC4B0A7C1D5B /* Pods-WebAuthnKitTests.release.xcconfig */;
+			baseConfigurationReference = 50B7A9860B5ACF305F766E73 /* Pods-WebAuthnKitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
