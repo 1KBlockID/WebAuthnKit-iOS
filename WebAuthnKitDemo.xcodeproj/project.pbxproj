@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F9224442878748400F50832 /* WebAuthnKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9224432878748400F50832 /* WebAuthnKit.framework */; };
-		1F9224452878748400F50832 /* WebAuthnKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9224432878748400F50832 /* WebAuthnKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C1CE6CC94C675903DECD1AA /* Pods_WebAuthnKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23E76BBB8B253980A27DDD2 /* Pods_WebAuthnKit.framework */; };
 		5C9F1987175EA6821F22304E /* Pods_WebAuthnKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE00677967880A256092E9B /* Pods_WebAuthnKitTests.framework */; };
 		9030FFA021A5369600FB8878 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030FF9F21A5369600FB8878 /* RegistrationViewController.swift */; };
@@ -88,7 +86,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1F9224452878748400F50832 /* WebAuthnKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,7 +93,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1F9224432878748400F50832 /* WebAuthnKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebAuthnKit.framework; sourceTree = "<group>"; };
 		54DBD0C3C74123F3DB3CA01B /* Pods-WebAuthnKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKitDemo.release.xcconfig"; path = "Target Support Files/Pods-WebAuthnKitDemo/Pods-WebAuthnKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		65EFA5498C6F74BBA5A9FBB8 /* Pods-WebAuthnKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebAuthnKitTests.debug.xcconfig"; path = "Target Support Files/Pods-WebAuthnKitTests/Pods-WebAuthnKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9030FF9F21A5369600FB8878 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -159,7 +155,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC07176E26B2BB40447D6C7 /* Pods_WebAuthnKitDemo.framework in Frameworks */,
-				1F9224442878748400F50832 /* WebAuthnKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +181,6 @@
 		1FE4A87D287871DD008F7125 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F9224432878748400F50832 /* WebAuthnKit.framework */,
 				D23E76BBB8B253980A27DDD2 /* Pods_WebAuthnKit.framework */,
 				F9E6D625815460BB9518428A /* Pods_WebAuthnKitDemo.framework */,
 				DAE00677967880A256092E9B /* Pods_WebAuthnKitTests.framework */,
