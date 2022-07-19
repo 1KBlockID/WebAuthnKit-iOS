@@ -9,7 +9,7 @@
 import UIKit
 import PromiseKit
 
-public protocol KeyDetailViewDelegate: class {
+public protocol KeyDetailViewDelegate: AnyObject {
     func userDidRequestToCreateNewKey(keyName: String)
     func userDidCancel()
 }

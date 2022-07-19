@@ -9,7 +9,7 @@
 import UIKit
 import PromiseKit
 
-public protocol KeySelectionViewDelegate: class {
+public protocol KeySelectionViewDelegate: AnyObject {
     func userDidSelectCredential(source: PublicKeyCredentialSource)
     func userDidCancel()
 }
