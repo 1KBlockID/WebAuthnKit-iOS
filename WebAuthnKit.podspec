@@ -18,10 +18,10 @@ This library provides you a way to handle W3C Web Authentication API (a.k.a. Web
   s.source_files  = "WebAuthnKit/Sources/**/*.swift"
   
   s.framework  = "Foundation", "UIKit", "LocalAuthentication"
-  s.dependency "PromiseKit", "~> 6.13.1"
+  s.dependency "PromiseKit", "~> 6.18.1"
   s.dependency "EllipticCurveKeyPair", "~> 2.0.2"
   s.dependency "KeychainAccess", "~> 4.2.1"
-  s.dependency "CryptoSwift", "~> 1.3.8"
+  s.dependency "CryptoSwift", "~> 1.5.1"
   
   s.swift_version = "4.2"
 
