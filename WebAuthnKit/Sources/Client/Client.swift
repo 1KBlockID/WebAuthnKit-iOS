@@ -68,6 +68,30 @@ public class WebAuthnClient: ClientOperationDelegate {
             }
     }
 
+    public func create(_ options: PublicKeyCredentialCreationOptions, context: LAContext? = nil, clientDataHash: [UInt8])
+        -> Promise<CreateResponse> {
+
+            WAKLogger.debug("<WebAuthnClient> create")
+
+            return Promise { resolver in
+
+                let op = self.newCreateOperation(options, context: context, clientDataHash: clientDataHash)
+                op.delegate = self
+                self.createOperations[op.id] = op
+
+                let promise = op.start()
+                promise.done {cred in
+
+                    resolver.fulfill(cred)
+
+                }.catch { error in
+
+                    resolver.reject(error)
+
+                }
+            }
+    }
+    
     public func get(_ options: PublicKeyCredentialRequestOptions, context: LAContext? = nil)
         -> Promise<GetResponse> {
 
@@ -76,6 +100,31 @@ public class WebAuthnClient: ClientOperationDelegate {
             return Promise { resolver in
                 
                 let op = self.newGetOperation(options, context: context)
+                op.delegate = self
+                self.getOperations[op.id] = op
+
+                let promise = op.start()
+                promise.done {cred in
+
+                    resolver.fulfill(cred)
+
+                }.catch { error in
+
+                    resolver.reject(error)
+
+                }
+
+            }
+    }
+    
+    public func get(_ options: PublicKeyCredentialRequestOptions, context: LAContext? = nil, clientDataHash: [UInt8])
+        -> Promise<GetResponse> {
+
+            WAKLogger.debug("<WebAuthnClient> get")
+
+            return Promise { resolver in
+                
+                let op = self.newGetOperation(options, context: context, clientDataHash: clientDataHash)
                 op.delegate = self
                 self.getOperations[op.id] = op
 
@@ -138,6 +187,33 @@ public class WebAuthnClient: ClientOperationDelegate {
 
     }
 
+    public func newCreateOperation(_ options: PublicKeyCredentialCreationOptions, context: LAContext?, clientDataHash: [UInt8])
+        -> ClientCreateOperation {
+
+            WAKLogger.debug("<WebAuthnClient> newCreateOperation")
+
+            let lifetimeTimer = self.adjustLifetimeTimer(options.timeout)
+            let rpId = self.pickRelyingPartyID(options.rp.id)
+
+            // 5.1.3 - 9,10
+            // check options.pubKeyCredParmas
+            // currently 'public-key' is only in specification.
+            // do nothing
+
+            let session = self.authenticator.newMakeCredentialSession(context: context)
+
+            return ClientCreateOperation(
+                options:        options,
+                rpId:           rpId,
+                session:        session,
+                clientData:     nil,
+                clientDataJSON: "",
+                clientDataHash: clientDataHash,
+                lifetimeTimer:  lifetimeTimer
+            )
+
+    }
+    
     public func newGetOperation(_ options: PublicKeyCredentialRequestOptions, context: LAContext?)
         -> ClientGetOperation {
 
@@ -164,6 +240,27 @@ public class WebAuthnClient: ClientOperationDelegate {
             session:        session,
             clientData:     clientData,
             clientDataJSON: clientDataJSON,
+            clientDataHash: clientDataHash,
+            lifetimeTimer:  lifetimeTimer
+        )
+    }
+    
+    public func newGetOperation(_ options: PublicKeyCredentialRequestOptions, context: LAContext?, clientDataHash: [UInt8])
+        -> ClientGetOperation {
+
+        WAKLogger.debug("<WebAuthnClient> newGetOperation")
+
+        let lifetimeTimer = self.adjustLifetimeTimer(options.timeout)
+        let rpId = self.pickRelyingPartyID(options.rpId)
+
+        let session = self.authenticator.newGetAssertionSession(context: context)
+
+        return ClientGetOperation(
+            options:        options,
+            rpId:           rpId,
+            session:        session,
+            clientData:     nil,
+            clientDataJSON: "",
             clientDataHash: clientDataHash,
             lifetimeTimer:  lifetimeTimer
         )

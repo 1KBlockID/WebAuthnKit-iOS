@@ -120,7 +120,6 @@ public class InternalAuthenticatorMakeCredentialSession : AuthenticatorMakeCrede
         credTypesAndPubKeyAlgs:          [PublicKeyCredentialParameters] = [PublicKeyCredentialParameters](),
         excludeCredentialDescriptorList: [PublicKeyCredentialDescriptor] = [PublicKeyCredentialDescriptor]()
     ) {
-        
         WAKLogger.debug("<MakeCredentialSession> make credential")
         
         let requestedAlgs = credTypesAndPubKeyAlgs.map { $0.alg }
@@ -164,16 +163,21 @@ public class InternalAuthenticatorMakeCredentialSession : AuthenticatorMakeCrede
             return
         }
         
-        firstly {
-            
-            self.ui.requestUserConsent(
-                rpEntity:            rpEntity,
-                userEntity:          userEntity,
-                requireVerification: false, // ignoring/skip user_verification
-                context:             context
-            )
-            
-        }.done { keyName in
+        // Unecessary promise
+        // Below code is commented as it takes app to main thread
+        // and back to working thread and that even not required
+        // while making credentials
+//        firstly {
+//
+//            self.ui.requestUserConsent(
+//                rpEntity:            rpEntity,
+//                userEntity:          userEntity,
+//                requireVerification: false, // ignoring/skip user_verification
+//                context:             context
+//            )
+//
+//        }.done
+//        { keyName in
                 
             let credentialId = self.createNewCredentialId()
 
@@ -183,7 +187,7 @@ public class InternalAuthenticatorMakeCredentialSession : AuthenticatorMakeCrede
                 userHandle: userEntity.id,
                 signCount:  0,
                 alg:        keySupport.selectedAlg.rawValue,
-                otherUI:    keyName
+                otherUI:    userEntity.name + (rpEntity.id ?? "")   // Here keyName is replaced
             )
 
             self.credentialStore.deleteAllCredentialSources(
@@ -243,13 +247,13 @@ public class InternalAuthenticatorMakeCredentialSession : AuthenticatorMakeCrede
                 attestation: attestation
             )
 
-        }.catch { error in
-            if let err = error as? WAKError {
-                self.stop(by: err)
-            } else {
-                self.stop(by: .unknown)
-            }
-        }
+//        }.catch { error in
+//            if let err = error as? WAKError {
+//                self.stop(by: err)
+//            } else {
+//                self.stop(by: .unknown)
+//            }
+//        }
     }
     
     // 6.3.1 Lookup Credential Source By Credential ID Algoreithm

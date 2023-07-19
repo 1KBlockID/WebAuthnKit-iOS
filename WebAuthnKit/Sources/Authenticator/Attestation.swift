@@ -54,13 +54,18 @@ public class AttestationObject {
 
     public func toBytes() -> Optional<[UInt8]> {
 
-        let dict = SimpleOrderedDictionary<String>()
-        dict.addBytes("authData", self.authData.toBytes())
-        dict.addString("fmt", "packed")
-        dict.addStringKeyMap("attStmt", self.attStmt)
+//        let dict = SimpleOrderedDictionary<String>()
+//        dict.addBytes("authData", self.authData.toBytes())
+//        dict.addString("fmt", "packed")
+//        dict.addStringKeyMap("attStmt", self.attStmt)
+        let dict = SimpleOrderedDictionary<Int>()
+        dict.addString(1, "packed")
+        dict.addBytes(2, self.authData.toBytes())
+        dict.addStringKeyMap(3, self.attStmt)
+        WAKLogger.debug("AUTH_DATA:" + Base64.encodeBase64URL(self.authData.toBytes()))
 
         return CBORWriter()
-            .putStringKeyMap(dict)
+            .putIntKeyMap(dict)
             .getResult()
     }
 

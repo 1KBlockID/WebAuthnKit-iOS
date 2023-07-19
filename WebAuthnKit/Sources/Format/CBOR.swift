@@ -31,7 +31,7 @@ public enum CBORError : Error {
 }
 
 
-internal class SimpleOrderedDictionary<T1: Hashable> {
+public class SimpleOrderedDictionary<T1: Hashable> {
     
     var list = [(T1, Any)]()
     
@@ -55,7 +55,7 @@ internal class SimpleOrderedDictionary<T1: Hashable> {
         return dic
     }
     
-    init() {
+    public init() {
         
     }
     
@@ -64,6 +64,10 @@ internal class SimpleOrderedDictionary<T1: Hashable> {
     }
     
     public func addBytes(_ k: T1, _ v: [UInt8]) {
+        self.add(k, v)
+    }
+    
+    public func addBool(_ k:T1, _ v: Bool) {
         self.add(k, v)
     }
     
@@ -88,7 +92,7 @@ internal class SimpleOrderedDictionary<T1: Hashable> {
     }
     
     public func get(_ k: T1) -> Optional<Any> {
-        return self.list.first { $0.0 == k } 
+        return self.list.first { $0.0 == k }
     }
     
     public func entries() -> [(T1, Any)] {
@@ -96,13 +100,13 @@ internal class SimpleOrderedDictionary<T1: Hashable> {
     }
 }
 
-internal class CBORReader {
+public class CBORReader {
 
     private var bytes: [UInt8]
     private let size: Int
     private var cursor: Int = 0
 
-    init(bytes: [UInt8]) {
+    public init(bytes: [UInt8]) {
         self.bytes = bytes
         self.size = bytes.count
     }
@@ -525,11 +529,11 @@ internal class CBORReader {
     }
 }
 
-internal class CBORWriter {
+public class CBORWriter {
 
     private var result: [UInt8]
 
-    init() {
+    public init() {
        self.result = [UInt8]()
     }
 
@@ -607,6 +611,10 @@ internal class CBORWriter {
                 _ = self.putDouble(value as! Double)
             } else if value is Bool {
                 _ = self.putBool(value as! Bool)
+            } else if value is SimpleOrderedDictionary<String> {
+                _ = self.putStringKeyMap(value as! SimpleOrderedDictionary<String>)
+            } else if value is [Any] {
+                _ = self.putArray(value as! [Any])
             } else {
                 fatalError("unsupported value type \(value)")
             }

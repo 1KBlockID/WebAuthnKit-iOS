@@ -18,7 +18,7 @@ public class ClientCreateOperation: AuthenticatorMakeCredentialSessionDelegate {
 
     private let options:        PublicKeyCredentialCreationOptions
     private let rpId:           String
-    private let clientData:     CollectedClientData
+    private let clientData:     CollectedClientData?
     private let clientDataJSON: String
     private let clientDataHash: [UInt8]
     private let lifetimeTimer:  UInt64
@@ -34,7 +34,7 @@ public class ClientCreateOperation: AuthenticatorMakeCredentialSessionDelegate {
         options:        PublicKeyCredentialCreationOptions,
         rpId:           String,
         session:        AuthenticatorMakeCredentialSession,
-        clientData:     CollectedClientData,
+        clientData:     CollectedClientData?,
         clientDataJSON: String,
         clientDataHash: [UInt8],
         lifetimeTimer:  UInt64
@@ -70,7 +70,7 @@ public class ClientCreateOperation: AuthenticatorMakeCredentialSessionDelegate {
                 }
                 self.resolver = resolver
                 self.startLifetimeTimer()
-
+                WAKLogger.debug("<Client create operation: start()> setting delegate with: \(self.type)")
                 self.session.delegate = self
                 self.session.start()
             }
