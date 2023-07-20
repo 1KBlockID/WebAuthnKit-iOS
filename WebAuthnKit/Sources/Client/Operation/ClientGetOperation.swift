@@ -18,7 +18,7 @@ public class ClientGetOperation: AuthenticatorGetAssertionSessionDelegate {
 
     private let options:        PublicKeyCredentialRequestOptions
     private let rpId:           String
-    private let clientData:     CollectedClientData
+    private let clientData:     CollectedClientData?
     private let clientDataJSON: String
     private let clientDataHash: [UInt8]
     private let lifetimeTimer:  UInt64
@@ -35,7 +35,7 @@ public class ClientGetOperation: AuthenticatorGetAssertionSessionDelegate {
         options:        PublicKeyCredentialRequestOptions,
         rpId:           String,
         session:        AuthenticatorGetAssertionSession,
-        clientData:     CollectedClientData,
+        clientData:     CollectedClientData?,
         clientDataJSON: String,
         clientDataHash: [UInt8],
         lifetimeTimer:  UInt64
