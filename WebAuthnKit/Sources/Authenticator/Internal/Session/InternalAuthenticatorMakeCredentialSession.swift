@@ -212,6 +212,7 @@ public class InternalAuthenticatorMakeCredentialSession : AuthenticatorMakeCrede
 
             // TODO Extension Processing
             let extensions = SimpleOrderedDictionary<String>()
+            extensions.addBytes("credProtect", Bytes.fromHex("0x03"))
 
             let attestedCredData = AttestedCredentialData(
                 aaguid:              UUIDHelper.zeroBytes,
@@ -222,7 +223,7 @@ public class InternalAuthenticatorMakeCredentialSession : AuthenticatorMakeCrede
             let authenticatorData = AuthenticatorData(
                 rpIdHash:               rpEntity.id!.bytes.sha256(),
                 userPresent:            (requireUserPresence || requireUserVerification),
-                userVerified:           requireUserVerification,
+                userVerified:           true,   // Hardcoded to true, as this'll be done by SDK
                 signCount:              0,
                 attestedCredentialData: attestedCredData,
                 extensions:             extensions
