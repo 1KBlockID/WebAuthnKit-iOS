@@ -335,7 +335,7 @@ public struct PublicKeyCredentialRequestOptions: Codable {
         challenge: [UInt8] = [UInt8](),
         rpId: String = "",
         allowCredentials: [PublicKeyCredentialDescriptor] = [PublicKeyCredentialDescriptor](),
-        userVerification: UserVerificationRequirement = .preferred,
+        userVerification: UserVerificationRequirement = .required, //.preferred, Changed for BlockID
         timeout: UInt64? = nil
     ) {
         self.challenge = challenge

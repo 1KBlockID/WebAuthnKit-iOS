@@ -128,17 +128,22 @@ public class InternalAuthenticatorGetAssertionSession : AuthenticatorGetAssertio
             self.stop(by: .notAllowed)
             return
         }
+/* Change for BlockID
+    Following code is commented to bypass UI handling executed by WebAuthnKit
+    as it leads to de-allocation of promises and which eventually doesn't send
+    response back to using-entity.
+*/
+//        firstly {
+//
+//            self.ui.requestUserSelection(
+//                sources:             [credSources.last!],
+//                requireVerification: false, // ignoring/skip user_verification
+//                context:             context
+//            )
+//
+//        }.done { cred in
         
-        firstly {
-            
-            self.ui.requestUserSelection(
-                sources:             [credSources.last!],
-                requireVerification: false, // ignoring/skip user_verification
-                context:             context
-            )
-            
-        }.done { cred in
-                
+            let cred = credSources.last!
             var newSignCount: UInt32 = 0
 
             var copiedCred = cred
@@ -154,7 +159,7 @@ public class InternalAuthenticatorGetAssertionSession : AuthenticatorGetAssertio
             let authenticatorData = AuthenticatorData(
                 rpIdHash:               rpId.bytes.sha256(),
                 userPresent:            (requireUserPresence || requireUserVerification),
-                userVerified:           true,
+                userVerified:           true,   // Change for BlockID, hardcoded value to 'true'
                 signCount:              newSignCount,
                 attestedCredentialData: nil,
                 extensions:             extensions
@@ -199,14 +204,17 @@ public class InternalAuthenticatorGetAssertionSession : AuthenticatorGetAssertio
                 session:   self,
                 assertion: assertion
             )
-                
-        }.catch { error in
-            if let err = error as? WAKError {
-                self.stop(by: err)
-            } else {
-                self.stop(by: .unknown)
-            }
-        }
+        
+/* Change for BlockID
+    Following code is commented as firstly part is commented above.
+*/
+//        }.catch { error in
+//            if let err = error as? WAKError {
+//                self.stop(by: err)
+//            } else {
+//                self.stop(by: .unknown)
+//            }
+//        }
         
     }
     
