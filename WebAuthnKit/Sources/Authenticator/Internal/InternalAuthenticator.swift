@@ -109,4 +109,8 @@ public class InternalAuthenticator : Authenticator {
         )
     }
 
+    public func reset(_ rpId: String) {
+        credentialStore.deleteAll(rpId)
+    }
+
 }

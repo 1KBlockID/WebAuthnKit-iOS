@@ -139,22 +139,25 @@ public class InternalAuthenticatorMakeCredentialSession : AuthenticatorMakeCrede
         }
         
         if hasSourceToBeExcluded {
-            firstly {
-                self.ui.askUserToCreateNewCredential(rpId: rpEntity.id!)
-            }.done {
+// Change for BlockID
+// Below code is commented
+// Made it at-par with Android
+//            firstly {
+//                self.ui.askUserToCreateNewCredential(rpId: rpEntity.id!)
+//            }.done {
                 self.stop(by: .invalidState)
                 return
-            }.catch { error in
-                switch error {
-                case WAKError.notAllowed:
-                    self.stop(by: .notAllowed)
-                    return
-                default:
-                    self.stop(by: .unknown)
-                    return
-                }
-            }
-            return
+//            }.catch { error in
+//                switch error {
+//                case WAKError.notAllowed:
+//                    self.stop(by: .notAllowed)
+//                    return
+//                default:
+//                    self.stop(by: .unknown)
+//                    return
+//                }
+//            }
+//            return
         }
         
         if requireUserVerification && !self.setting.allowUserVerification {
@@ -163,6 +166,7 @@ public class InternalAuthenticatorMakeCredentialSession : AuthenticatorMakeCrede
             return
         }
         
+// Change for BlockID
         // Unecessary promise
         // Below code is commented as it takes app to main thread
         // and back to working thread and that even not required

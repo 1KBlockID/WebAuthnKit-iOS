@@ -94,6 +94,7 @@ public protocol Authenticator {
     
     func newMakeCredentialSession(context: LAContext?) -> AuthenticatorMakeCredentialSession
     func newGetAssertionSession(context: LAContext?) -> AuthenticatorGetAssertionSession
+    func reset(_ rpId: String)
 
 }
 

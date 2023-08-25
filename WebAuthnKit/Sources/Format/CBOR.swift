@@ -554,7 +554,11 @@ public class CBORWriter {
             } else if $0 is Double {
                _ = self.putDouble($0 as! Double)
             } else if $0 is Bool {
-               _ = self.putBool($0 as! Bool)
+                _ = self.putBool($0 as! Bool)
+            } else if $0 is SimpleOrderedDictionary<String> {
+                _ = self.putStringKeyMap($0 as! SimpleOrderedDictionary<String>)
+            } else if $0 is [Any] {
+                _ = self.putArray($0 as! [Any])
             } else {
                 fatalError("unsupported value type")
             }

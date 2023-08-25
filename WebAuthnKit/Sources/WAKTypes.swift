@@ -107,14 +107,14 @@ public struct PublicKeyCredentialDescriptor: Codable {
     
     public var type: PublicKeyCredentialType = .publicKey
     public var id: [UInt8] // credential ID
-    public var transports: [AuthenticatorTransport] = [AuthenticatorTransport.internal_]
+    public var transports: [AuthenticatorTransport]
     
     public init(
         id:         [UInt8]                  = [UInt8](),
         transports: [AuthenticatorTransport] = [AuthenticatorTransport]()
     ) {
         self.id         = id
-        //self.transports = transports
+        self.transports = transports
     }
 
     public mutating func addTransport(transport: AuthenticatorTransport) {

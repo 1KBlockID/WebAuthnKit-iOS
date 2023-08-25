@@ -43,6 +43,10 @@ public class WebAuthnClient: ClientOperationDelegate {
         self.origin        = origin
         self.authenticator = authenticator
     }
+    
+    public func resetAuthenticator(forRpId rpId: String) {
+        authenticator.reset(rpId)
+    }
 
     public func create(_ options: PublicKeyCredentialCreationOptions, context: LAContext? = nil)
         -> Promise<CreateResponse> {

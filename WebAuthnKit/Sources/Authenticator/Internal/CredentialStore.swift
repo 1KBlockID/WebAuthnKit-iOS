@@ -16,6 +16,7 @@ public protocol CredentialStore {
     func loadAllCredentialSources(rpId: String) -> [PublicKeyCredentialSource]
     func deleteCredentialSource(_ cred: PublicKeyCredentialSource) -> Bool
     func deleteAllCredentialSources(rpId: String, userHandle: [UInt8])
+    func deleteAll(_ rpId: String)
 }
 
 public class KeychainCredentialStore : CredentialStore {
@@ -89,6 +90,18 @@ public class KeychainCredentialStore : CredentialStore {
             return false
         }
 
+    }
+    
+    public func deleteAll(_ rpId: String) {
+        WAKLogger.debug("<KeychainStore> deleteAllCredentialSource")
+        
+        let keychain = Keychain(service: rpId)
+        
+        do {
+            try keychain.removeAll()
+        } catch let error {
+            WAKLogger.debug("<KeychainStore> failed to delete All credential-source: \(error)")
+        }
     }
 
     public func saveCredentialSource(_ cred: PublicKeyCredentialSource) -> Bool {
