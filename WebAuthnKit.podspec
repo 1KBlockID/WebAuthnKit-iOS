@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "WebAuthnKit"
-  s.version      = "2.0.4"
+  s.version      = "2.0.5"
   
   s.summary      = "WebAuthn Client and Authenticator Support Library"
   s.description  = <<-DESC
@@ -21,7 +21,7 @@ This library provides you a way to handle W3C Web Authentication API (a.k.a. Web
   s.dependency "PromiseKit", "~> 6.13.1"
   s.dependency "EllipticCurveKeyPair", "~> 2.0.2"
   s.dependency "KeychainAccess", "~> 4.2.1"
-  s.dependency "CryptoSwift", "~> 1.6.0"
+  s.dependency "CryptoSwift", "~> 1.10.0"
   
   s.swift_version = "4.2"
 
