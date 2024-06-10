@@ -21,7 +21,7 @@ This library provides you a way to handle W3C Web Authentication API (a.k.a. Web
   s.dependency "PromiseKit", "~> 6.13.1"
   s.dependency "EllipticCurveKeyPair", "~> 2.0.2"
   s.dependency "KeychainAccess", "~> 4.2.1"
-  s.dependency "CryptoSwift", "~> 1.10.0"
+  s.dependency "CryptoSwift", "~> 1.8.2"
   
   s.swift_version = "4.2"
 

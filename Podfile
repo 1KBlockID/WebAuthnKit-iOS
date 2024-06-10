@@ -9,7 +9,7 @@ target 'WebAuthnKitDemo' do
   
   pod "EllipticCurveKeyPair", "~> 2.0.2"
   pod "KeychainAccess", "~> 4.2.1"
-  pod "CryptoSwift", "~> 1.6.0"
+  pod "CryptoSwift", "~> 1.8.2"
   pod "PromiseKit", "~> 6.13.1"
   
   # Pods for WebAuthnKitDemo
@@ -18,7 +18,7 @@ target 'WebAuthnKitDemo' do
     inherit! :search_paths
     pod "EllipticCurveKeyPair", "~> 2.0.2"
     pod "KeychainAccess", "~> 4.2.1"
-    pod "CryptoSwift", "~> 1.6.0"
+    pod "CryptoSwift", "~> 1.8.2"
     pod "PromiseKit", "~> 6.13.1"
   end
 
